@@ -27,11 +27,9 @@ class Loading extends React.Component {
                     }
                 })
             } else {
-                this.setState(prevState => {
-                    return {
-                        text: prevState.text + '.'
-                    }
-                })
+                this.setState(prevState => (
+                    { text: prevState.text + '.' }
+                ))
             }
         }, this.props.speed)
     }
