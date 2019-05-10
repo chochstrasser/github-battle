@@ -1,8 +1,9 @@
-var path = require('path')
-var HtmlWebpackPlugin = require('html-webpack-plugin')
+var path = require('path');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var webpack = require('webpack');
 
 module.exports = {
-    entry: ['@babel/polyfill', './app/index.js'],
+    entry: ['@babel/polyfill', 'whatwg-fetch', './app/index.js'],
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'index_bundle.js',
